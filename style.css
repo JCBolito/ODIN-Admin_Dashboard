@@ -1,0 +1,169 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+:root {
+	--grey-color: rgb(227, 227, 227);
+	--white-color: white;
+	--blue-color: #1992d4;
+	--roboto-font: 'Roboto', Arial, Helvetica, sans-serif;
+	--section-padding: 1rem 2rem;
+
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	font-family: var(--roboto-font);
+}
+
+body {
+	display: grid;
+	grid-template-columns: 1fr 3fr;
+	grid-template-rows: auto auto auto;
+}
+
+/* NAV */
+nav {
+	color: var(--white-color);
+	background-color: var(--blue-color);
+	grid-column: 1;
+	grid-row: 1 / -1;
+	padding: 1rem;
+	z-index: 2;
+}
+
+nav>ul {
+	padding: 2rem 1rem;
+}
+
+li {
+	margin-top: 1rem;
+	display: flex;
+	align-items: center;
+	gap: 1rem;
+	list-style-type: none;
+}
+
+a {
+	color: var(--white-color);
+	text-decoration: none;
+}
+
+.navIcons {
+	height: 1.5rem;
+}
+
+.title {
+	display: flex;
+	align-items: center;
+}
+
+/* HEADER */
+header {
+	box-shadow: 0 3px 3px 1px #0000004d;
+	z-index: 1;
+}
+
+/* TOP HEADER */
+.topHeader,
+.topHeader>* {
+	display: flex;
+	/* display: grid;
+	grid-template-columns: 1fr auto auto; */
+}
+
+.topHeader {
+	justify-content: space-between;
+	padding: var(--section-padding);
+	gap: 3rem;
+}
+
+.topHeader>* {
+	align-items: center;
+	gap: 1.5rem;
+}
+
+.search>button {
+	height: 2rem;
+	background: none;
+	border: 0;
+	cursor: pointer;
+	transition: 0.2s ease-in-out;
+}
+
+.search>button:hover {
+	transform: scale(1.2);
+}
+
+.search>button>img {
+	height: 1rem;
+}
+
+.search>input {
+	height: 2rem;
+	width: 35vw;
+	background-color: var(--grey-color);
+	border-radius: 2rem;
+	border: 0;
+	padding: 0 1rem;
+}
+
+.profile {
+	font-weight: bold;
+}
+
+.profile>img:nth-child(1) {
+	height: 1.5rem;
+	transition: 0.2s ease-in-out;
+	cursor: pointer;
+}
+
+.profile>img:nth-child(1):hover {
+	transform: scale(1.2);
+
+}
+
+.profile>img:nth-child(2) {
+	height: 3rem;
+}
+
+/* BOTTOM HEADER */
+.bottomHeader {
+	display: grid;
+	grid-template-columns: auto 1fr auto auto auto;
+	gap: 1rem;
+	align-items: center;
+	padding: var(--section-padding);
+
+}
+
+.bottomHeader>img {
+	height: 4rem;
+}
+
+.introduction {
+	font-weight: bold;
+	font-size: 1.5rem;
+	line-height: 1.5rem;
+}
+
+.introduction>p:first-child {
+	font-size: 0.8rem;
+}
+
+.bottomHeader>button {
+	height: 2rem;
+	width: 5rem;
+	color: var(--white-color);
+	background-color: var(--blue-color);
+	border: 0;
+	border-radius: 1rem;
+	transition: 0.2s ease-in-out;
+	cursor: pointer;
+}
+
+.bottomHeader>button:hover {
+	transform: scale(1.1);
+}
+
+/* NOTES */
+/* - refactor topHeader from flex to grid */
