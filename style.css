@@ -217,7 +217,7 @@ header {
 }
 
 .bottomHeader>.buttons>button:hover {
-	transform: scale(1.2);
+	transform: scale(1.1);
 }
 
 /* MAIN */
@@ -242,7 +242,7 @@ main>section>h1 {
 .articles {
 	display: grid;
 	/* grid-template-columns: 1fr 1fr; */
-	grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+	grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
 	gap: 1.5rem;
 }
 
@@ -349,6 +349,11 @@ aside>section>h1 {
 }
 
 @media screen and (max-width: 1035px) {
+	:root {
+		--section-padding: 1rem 0.5rem;
+
+	}
+
 	.titleHeader>button {
 		display: block;
 		margin-left: 1rem;
@@ -384,6 +389,17 @@ aside>section>h1 {
 		transform: scale(1.2);
 	}
 
+	.profile {
+		justify-content: end;
+		grid-column: 3;
+	}
+
+	.search {
+		gap: 0.5rem;
+		grid-row: 1/2;
+		grid-column: 1/-1;
+	}
+
 	.topHeader>.profile>*:not(:first-child) {
 		display: none;
 	}
@@ -393,12 +409,19 @@ aside>section>h1 {
 	}
 
 	.bottomHeader {
-		grid-template-columns: auto 1fr;
+		grid-template-columns: auto;
+		justify-content: center;
+		justify-items: center;
+		text-align: center;
+	}
+
+	.bottomHeader>.introduction>h1 {
+		line-height: 2.5rem;
 	}
 
 	.bottomHeader>.buttons {
-		grid-column: 2 / 3;
-		justify-content: left;
+		justify-content: center;
+		gap: 0.55rem;
 	}
 
 	nav {
@@ -419,12 +442,11 @@ aside>section>h1 {
 
 	main {
 		grid-template-columns: 1fr;
+		padding: 1rem;
 	}
 
 	aside {
 		grid-template-rows: 1fr;
 		gap: 1.5rem;
 	}
-
-	/* STILL UNRESPONSIVE ON SOME MOBILE DEVICES */
 }
