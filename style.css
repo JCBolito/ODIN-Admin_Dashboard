@@ -20,7 +20,7 @@
 
 body {
 	display: grid;
-	grid-template-columns: 1fr 3fr;
+	grid-template-columns: 1fr 5fr;
 	grid-template-rows: auto auto auto;
 }
 
@@ -187,9 +187,9 @@ main p {
 
 main {
 	background-color: var(--grey-color);
+	min-height: 100vh;
 	display: grid;
 	grid-template-columns: 3fr 1fr;
-	height: 100vh;
 	padding: 1.5rem;
 	gap: 1.5rem;
 }
@@ -222,6 +222,29 @@ main>section>h1 {
 
 .articles>article>p {
 	font-size: 0.9rem;
+}
+
+.projButtons {
+	display: grid;
+	grid-template-columns: repeat(3, max-content);
+	justify-content: end;
+	gap: 1.5rem;
+	margin-top: 2rem;
+}
+
+.projButtons>button {
+	background: none;
+	border: none;
+	opacity: 0.5;
+}
+
+.projButtons>button>img {
+	height: 1.55rem;
+	transition: 0.2s ease-in-out;
+}
+
+.projButtons>button>img:hover {
+	transform: scale(1.2);
 }
 
 /* ASIDE */
